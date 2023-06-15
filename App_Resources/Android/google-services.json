@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1067576094437",
+    "project_id": "hadireuy-15ba4",
+    "storage_bucket": "hadireuy-15ba4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1067576094437:android:1b198f772158e4a19c6e0c",
+        "android_client_info": {
+          "package_name": "com.hadireuy.ardika"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1067576094437-ihf4o1e73cp9l7stuve8m214kqeu208o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByoKij_CaLFcRX_0BLaql5Jo-RZxF8-1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1067576094437-ihf4o1e73cp9l7stuve8m214kqeu208o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

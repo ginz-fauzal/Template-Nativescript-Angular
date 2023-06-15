@@ -1,0 +1,28 @@
+<GridLayout rows="auto,*,auto">
+  <GridLayout row="0" class="header" columns="*,50,50,50">
+    <Label col="0" class="h3 p-15 t-white" text="Nama Room"></Label>
+    <Label col="3" class="fas h3 text-center t-white" text="&#xf142;"></Label>
+  </GridLayout>
+  <ScrollView row="1" #terminalScroller scrollBarIndicatorVisible="false">
+    <StackLayout>
+      <StackLayout *ngFor="let message of chatData" horizontalAlignment="{{ message.me=='1' ? 'right':'left' }}"
+        class="{{message.me=='1' ? 'm-right':'m-left'}} {{message.me=='1' ? 'right':'left'}}">
+        <Label class="title-name" [text]="message.username"></Label>
+        <Label *ngIf="message.tipe_message=='text'" class="msg" textWrap="true"
+          text="{{ message.tipe_message=='text'?message.message:'' }}"></Label>
+        <Image *ngIf="message.tipe_message=='image'" class="message-img" src="{{ message.images }}"></Image>
+        <Label class="time">{{ services.formatDateTime(message.created_at) }}</Label>
+      </StackLayout>
+    </StackLayout>
+  </ScrollView>
+  <GridLayout row="2" columns="*,40,40">
+    <TextView class="input-alt" height="{{chatText.length==0?'50':'auto'}}" col="0" hint="Tulis disini..."
+      text="{{chatText}}" [(ngModel)]="chatText">
+    </TextView>
+    <Label col="1" margin="0 10 0 0" padding="0" class="fas h2 t-color bg-blur cm" text="&#xf0c6;"></Label>
+    <Label *ngIf="!hiddenkirim" col="2" margin="0 10 0 0" padding="0" class="fas h2 t-color bg-blur cm" text="&#xf1d8;"
+      (tap)="sendMessage()"></Label>
+    <Label *ngIf="hiddenkirim" col="2" margin="0 10 0 0" padding="0" class="fas h2 t-color bg-blur cm"
+      text="&#xf110;"></Label>
+  </GridLayout>
+</GridLayout>

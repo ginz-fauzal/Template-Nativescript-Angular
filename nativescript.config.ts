@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-  id: 'org.nativescript.nstemplate',
+  id: 'com.hadireuy.ardika',
   appPath: 'src',
   appResourcesPath: 'App_Resources',
   android: {

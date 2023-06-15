@@ -1,0 +1,29 @@
+.message {
+  color: #767676;
+}
+
+.m-left {
+  padding: 3 10 10 10;
+  width: auto;
+  margin: 3,10,3,10;
+  margin-right: 100;
+  border-radius: 10;
+  border-top-left-radius: 0;
+  background-color: #f6f6ff;
+  margin-right: 100;
+}
+
+.m-right {
+  padding: 3 10 10 10;
+  width: auto;
+  margin: 3,10,3,10;
+  border-radius: 10;
+  border-top-right-radius: 0;
+  background-color: #f6f6ff;
+  margin-left: 100;
+}
+
+.message-img{
+  width: 300;
+  height: auto;
+}

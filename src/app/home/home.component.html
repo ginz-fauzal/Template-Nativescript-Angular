@@ -1,13 +1,20 @@
-<ActionBar class="action-bar">
-  <NavigationButton visibility="hidden"></NavigationButton>
-  <GridLayout columns="50, *">
-    <Label class="action-bar-title" text="Home" colSpan="2"></Label>
-
-    <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+<GridLayout rows="auto,*">
+  <GridLayout row="0" class="header" columns="*,50,50,50">
+    <Label col="0" class="h3 p-15 t-white" text="KAI Chat"></Label>
+    <Label col="1" class="fas h3 text-center t-white" text="&#xf0c0;"></Label>
+    <Label col="2" class="fas h3 text-center t-white" (tap)="services.logout()" text="&#xf011;"></Label>
+    <Label col="3" class="fas h3 text-center t-white" text="&#xf142;"></Label>
   </GridLayout>
-</ActionBar>
-
-<GridLayout class="page__content">
-  <Label class="page__content-icon fas" text="&#xf015;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
+  <ScrollView row="1">
+    <StackLayout class="list">
+      <GridLayout *ngFor="let conversation of rooms" [nsRouterLink]="['/room',conversation.id]" class="content" columns="auto,*">
+        <Image col="0" class="image middle" loadMode="async" src="{{ conversation.jumlah>1 ? conversation.foto:conversation.fotos }}"></Image>
+        <StackLayout col="1" class="p-15 middle">
+          <Label class="name" text="{{ conversation.jumlah>1 ? conversation.name:conversation.username }}"></Label>
+          <Label class="time" text="{{ services.formatDateTime(conversation.created_at) }}"></Label>
+        </StackLayout>
+      </GridLayout>
+    </StackLayout>
+  </ScrollView>
+  <Button row="1" class="btn-float fas" text="&#xf075;"></Button>
 </GridLayout>

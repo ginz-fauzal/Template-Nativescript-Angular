@@ -1,0 +1,15 @@
+<StackLayout class="container">
+  <StackLayout class="signUp">
+    <Label class="h3" text="Create Your Account"></Label>
+    <TextField class="w100" type="text" [(ngModel)]="username" name="username" placeholder="Username" reqired>
+    </TextField>
+    <TextField class="w100" type="email" [(ngModel)]="email" name="email" placeholder="Email" reqired></TextField>
+    <TextField type="password" [(ngModel)]="password" name="password" placeholder="Password" reqired></TextField>
+    <Button class="form-btn dx" (tap)="register()">Sign Up</Button>
+  </StackLayout>
+  <StackLayout class="signUp">
+    <TextField type="email" name="email" [(ngModel)]="email" placeholder="eMail" reqired></TextField>
+    <TextField type="password" name="password" [(ngModel)]="password" placeholder="Password" reqired></TextField>
+    <Button class="form-btn dx" (tap)="login()">Log In</Button>
+  </StackLayout>
+</StackLayout>
