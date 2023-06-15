@@ -1,0 +1,18 @@
+<GridLayout rows="auto,*">
+  <GridLayout row="0" class="header" columns="*,50,50,50">
+    <Label col="0" class="h3 p-15 t-white" text="Kontak" [nsRouterLink]="['/profile']"></Label>
+    <Label col="3" class="fas h3 text-center t-white" text="&#xf142;"></Label>
+  </GridLayout>
+  <ScrollView row="1">
+    <StackLayout class="list">
+      <GridLayout *ngFor="let conversation of rooms" [nsRouterLink]="['/room',conversation.id]" class="content" columns="auto,*">
+        <Image col="0" class="image middle" loadMode="async" src="{{ conversation.foto }}"></Image>
+        <StackLayout col="1" class="p-15 middle">
+          <Label class="name" text="{{ conversation.username }}"></Label>
+          <Label class="time" text="{{ conversation.email }}"></Label>
+        </StackLayout>
+      </GridLayout>
+    </StackLayout>
+  </ScrollView>
+  <Button row="1" class="btn-float fas" text="&#xf075;"></Button>
+</GridLayout>

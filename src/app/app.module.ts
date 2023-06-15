@@ -9,9 +9,9 @@ import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RoomChattingComponent } from './room-chatting/room-chatting.component';
-// import { ProfileComponent } from './profile/profile.component';
-// import { InfoComponent } from './info/info.component';
-// import { KontakComponent } from './kontak/kontak.component';
+import { ProfileComponent } from './profile/profile.component';
+import { InfoComponent } from './info/info.component';
+import { KontakComponent } from './kontak/kontak.component';
 
 @NgModule({
   bootstrap: [
@@ -29,7 +29,10 @@ import { RoomChattingComponent } from './room-chatting/room-chatting.component';
     AppComponent,
     LoginComponent,
     HomeComponent,
-    RoomChattingComponent
+    RoomChattingComponent,
+    ProfileComponent,
+    KontakComponent,
+    InfoComponent
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [

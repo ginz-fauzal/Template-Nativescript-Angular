@@ -7,7 +7,7 @@
     <StackLayout>
       <StackLayout *ngFor="let message of chatData" horizontalAlignment="{{ message.me=='1' ? 'right':'left' }}"
         class="{{message.me=='1' ? 'm-right':'m-left'}} {{message.me=='1' ? 'right':'left'}}">
-        <Label class="title-name" [text]="message.username"></Label>
+        <Label class="title-name" [text]="message.username" [nsRouterLink]="['/info',message.user_id]"></Label>
         <Label *ngIf="message.tipe_message=='text'" class="msg" textWrap="true"
           text="{{ message.tipe_message=='text'?message.message:'' }}"></Label>
         <Image *ngIf="message.tipe_message=='image'" class="message-img" src="{{ message.images }}"></Image>

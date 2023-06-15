@@ -9,17 +9,30 @@ android {
   // ndkVersion ""
 
   defaultConfig {
-    minSdkVersion 17
     // targetSdkVersion 32
+    minSdkVersion 21
 
     // Version Information
     versionCode 1
     versionName "1.0.0"
     
+    multiDexEnabled true
     generatedDensities = []
+  }
+
+  project.ext {
+    googlePlayServicesVersion = "17.0.0"
+  }
+
+  dexOptions {
+    javaMaxHeapSize "4g"
   }
 
   aaptOptions {
     additionalParameters "--no-version-vectors"
   }
+}
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
 }
